@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS water_reports (
   phone text NOT NULL,
   latitude numeric,
   longitude numeric,
-  issue_type text NOT NULL CHECK (issue_type IN ('fuite', 'panne_compteur', 'interruption_eau', 'autre')),
+    issue_type text NOT NULL CHECK (issue_type IN ('fuite', 'panne_compteur', 'interruption_eau', 'basse_pression', 'eau_trouble', 'eau_colore', 'casse_conduite_principale', 'debardement', 'autre')),
   description text NOT NULL,
   status text DEFAULT 'en_attente' CHECK (status IN ('en_attente', 'en_cours', 'resolu')),
   created_at timestamptz DEFAULT now(),
