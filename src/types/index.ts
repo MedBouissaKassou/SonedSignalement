@@ -7,7 +7,7 @@ export interface WaterReport {
   phone: string;
   latitude?: number;
   longitude?: number;
-  issue_type: 'fuite' | 'panne_compteur' | 'interruption_eau' | 'autre';
+  issue_type: 'fuite' | 'panne_compteur' | 'interruption_eau' | 'basse_pression' | 'eau_trouble' | 'eau_colore' | 'casse_conduite_principale' | 'debardement'| 'autre';
   description: string;
   status?: 'en_attente' | 'en_cours' | 'resolu';
   created_at?: string;
